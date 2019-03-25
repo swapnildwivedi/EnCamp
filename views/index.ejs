@@ -1,0 +1,37 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+
+<header class="jumbotron">
+    <div class="container">
+        <h1>Welcome to EnCamps!</h1>
+        <p>View our hand-picked campgrounds from all over the India</p>
+
+        <p>
+            <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add Campgrounds</a>
+        </p>
+    </div>
+</header>
+
+    <div class="row text-center">
+        <% campgrounds.forEach((campgrounds)=>{ %>
+                <div class="col-md-3 col-sm-6 row-in">
+                   <div class="img-thumbnail">
+                         <% var img = campgrounds.image; %>
+                         <img class="img-camp" src="<%= img %>">
+                         <div class="caption">
+                            <h5> <%= campgrounds.name %> </h5>
+                        </div>
+                        <a href="/campgrounds/<%= campgrounds._id %>" class="btn btn-primary">More Info</a>
+                   </div>   
+                </div>
+                <% }); %>
+    </div>
+
+
+
+
+
+</div>
+
+<% include partials/footer.ejs %>

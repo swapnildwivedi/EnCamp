@@ -1,0 +1,11 @@
+.row{
+   display:flex;
+   flex-wrap: wrap;
+}
+.row-in{
+    padding-top: 20px;
+}
+.img-camp{
+    width: 100%;
+    height: 150px;
+}
